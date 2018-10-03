@@ -8,14 +8,6 @@ var Oranges = () => (
     <li>Oranges</li>
 );
 
-
-// var GroceryListItem = (props) => (
-//     <ul>
-//         <li>{props.fruits[0]}</li>
-//         <li>{props.fruits[1]}</li>
-//     </ul>
-// )
-
 class GroceryListItem extends React.Component {
     constructor(props) {
         super(props);
@@ -56,7 +48,7 @@ class GroceryListItem extends React.Component {
 var GroceryList = (props) => (
     <ul>
         {props.fruits.map(fruit =>
-            <GroceryListItem fruit={fruit} />
+            <GroceryListItem fruit={fruit} key={fruit} />
         )}
     </ul>
 );
